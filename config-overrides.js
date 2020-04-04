@@ -4,12 +4,12 @@ const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 module.exports = override(
     addWebpackPlugin(new AntdDayjsWebpackPlugin()),
     fixBabelImports('import', {
-      libraryName: 'antd',
-      libraryDirectory: 'es',
-      style: true,
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: true,
     }),
     addLessLoader({
-      javascriptEnabled: true,
-      modifyVars: { '@primary-color': '#AEAEAE' },
+        javascriptEnabled: true,
+        modifyVars: { '@primary-color': '#AEAEAE' },
     }),
 );

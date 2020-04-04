@@ -1,14 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-let x = 1;
-let obj = {
-    sdf: 'dd',
-};
-let my = { dslfsdj: 'dsfsd' };
+
 function TopNav(props) {
     return (
         <>
             <button
+                type="button"
                 onClick={() => {
                     props.history.push('/recommend');
                 }}
@@ -16,6 +13,7 @@ function TopNav(props) {
                 推荐
             </button>
             <button
+                type="button"
                 onClick={() => {
                     props.history.push('/singer');
                 }}
@@ -23,6 +21,7 @@ function TopNav(props) {
                 歌手
             </button>
             <button
+                type="button"
                 onClick={() => {
                     props.history.push('/ranking');
                 }}

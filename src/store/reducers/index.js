@@ -1,6 +1,4 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux';
 
-
-export default combineReducers({
-
-})
+console.log('hello husky!');
+export default combineReducers({});

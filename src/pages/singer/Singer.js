@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function MyMusic() {
+export default function Singer() {
     return (
         <div>
-            我的音乐
+            歌手
         </div>
     )
 }

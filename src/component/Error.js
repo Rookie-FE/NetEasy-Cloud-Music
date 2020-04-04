@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {Button} from 'antd';
 
-export default function Error() {
+export default function Error(props) {
+     
     return (
         <div>
-            地址出错啦
+            404 Error<br/>
+            <Button type='primary' onClick={()=>{
+                props.history.replace('/recommend')
+            }} >跳转到首页</Button>
         </div>
     )
 }

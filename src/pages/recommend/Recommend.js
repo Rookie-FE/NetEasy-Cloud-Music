@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function FoundMusic() {
+export default function Recommend() {
     return (
         <div>
-            发现音乐
+            推荐
         </div>
     )
 }

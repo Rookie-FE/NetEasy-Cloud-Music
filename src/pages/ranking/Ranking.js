@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Friends() {
+export default function Ranking() {
     return (
         <div>
-            朋友
+            排行榜
         </div>
     )
 }

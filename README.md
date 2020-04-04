@@ -7,3 +7,8 @@ yarn install
 // or
 npm install
 ```
+
+## 运行项目
+```js
+yarn start
+```

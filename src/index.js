@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import store from './store';
-import {Button} from 'antd'
+import App from './pages/App'
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>hello world 
-    <Button type="primary">Button</Button>
-    </div>
+    <App/>
   </Provider>,
   document.getElementById('root')
 );

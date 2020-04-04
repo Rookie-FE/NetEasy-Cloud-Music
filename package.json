@@ -52,7 +52,7 @@
     },
     "devDependencies": {
         "@umijs/fabric": "^2.0.7",
-        "husky": "^4.2.3",
+        "husky": "4.2.3",
         "lint-staged": "^10.1.1",
         "prettier": "^2.0.2"
     }

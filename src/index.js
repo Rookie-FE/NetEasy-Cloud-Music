@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './store';
-import App from './pages/App';
-import './assets/reset.min.css';
 
+console.log('is precommit ok in vscode?');
 ReactDOM.render(
-  <Provider store={store}>
-    <App/>
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={store}>
+        <div>hello world</div>
+    </Provider>,
+    document.getElementById('root'),
 );

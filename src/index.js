@@ -5,7 +5,7 @@ import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>hello world</div>
+    <div>hello world lllll</div>
   </Provider>,
   document.getElementById('root')
 );

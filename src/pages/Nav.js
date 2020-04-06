@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { UnorderedListOutlined, SearchOutlined } from '@ant-design/icons';
 import './Nav.less';

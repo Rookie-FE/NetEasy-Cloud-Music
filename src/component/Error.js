@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {Button} from 'antd';
 
 export default function Error(props) {
-    const [times,setTimes] = useState(()=>(3));
+    const [times,setTimes] = useState(3);
 
     useEffect(()=>{
         const $timer = setInterval(() => {
@@ -15,7 +15,7 @@ export default function Error(props) {
         return ()=>{
             clearInterval($timer)
         }
-    },[])
+    },[times,props.history])
      
     return (
         <div>

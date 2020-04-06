@@ -1,34 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
+import { UnorderedListOutlined, SearchOutlined } from '@ant-design/icons';
+import './Nav.less';
 
-function TopNav(props) {
+function ChooseList({ history }) {
+    const [isSelect, setSelect] = useState(1);
     return (
-        <>
-            <button
-                type="button"
+        <div className="content">
+            <div
+                style={{ borderBottom: isSelect === 1 ? '2px solid white' : null }}
                 onClick={() => {
-                    props.history.push('/recommend');
+                    history.push('/recommend');
+                    setSelect(1);
                 }}
             >
                 推荐
-            </button>
-            <button
-                type="button"
+            </div>
+            <div
+                style={{ borderBottom: isSelect === 2 ? '2px solid white' : null }}
                 onClick={() => {
-                    props.history.push('/singer');
+                    history.push('/singer');
+                    setSelect(2);
                 }}
             >
                 歌手
-            </button>
-            <button
-                type="button"
+            </div>
+            <div
+                style={{ borderBottom: isSelect === 3 ? '2px solid white' : null }}
                 onClick={() => {
-                    props.history.push('/ranking');
+                    history.push('/ranking');
+                    setSelect(3);
                 }}
             >
                 排行榜
-            </button>
-        </>
+            </div>
+        </div>
+    );
+}
+
+function TopNav(props) {
+    return (
+        <div className="container">
+            <div className="header">
+                <UnorderedListOutlined />
+                <span>云音乐</span>
+                <SearchOutlined />
+            </div>
+            <ChooseList history={props.history} />
+        </div>
     );
 }
 export default withRouter(TopNav);

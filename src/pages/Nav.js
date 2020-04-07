@@ -1,44 +1,31 @@
-import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { UnorderedListOutlined, SearchOutlined } from '@ant-design/icons';
 import './Nav.less';
 
-function ChooseList({ history }) {
-    const [isSelect, setSelect] = useState(1);
+function ChooseList() {
     return (
         <div className="content">
-            <div
-                style={{ borderBottom: isSelect === 1 ? '2px solid white' : null }}
-                onClick={() => {
-                    history.push('/recommend');
-                    setSelect(1);
-                }}
-            >
-                推荐
-            </div>
-            <div
-                style={{ borderBottom: isSelect === 2 ? '2px solid white' : null }}
-                onClick={() => {
-                    history.push('/singer');
-                    setSelect(2);
-                }}
-            >
-                歌手
-            </div>
-            <div
-                style={{ borderBottom: isSelect === 3 ? '2px solid white' : null }}
-                onClick={() => {
-                    history.push('/ranking');
-                    setSelect(3);
-                }}
-            >
-                排行榜
-            </div>
+            <NavLink to="/recommend" activeClassName="selected">
+                <div>
+                    <span>推荐</span>
+                </div>
+            </NavLink>
+            <NavLink to="/singers" activeClassName="selected">
+                <div>
+                    <span>歌手</span>
+                </div>
+            </NavLink>
+            <NavLink to="/rank" activeClassName="selected">
+                <div>
+                    <span>排行榜</span>
+                </div>
+            </NavLink>
         </div>
     );
 }
 
-function TopNav(props) {
+export default function TopNav(props) {
     return (
         <div className="container">
             <div className="header">
@@ -46,8 +33,8 @@ function TopNav(props) {
                 <span>云音乐</span>
                 <SearchOutlined />
             </div>
-            <ChooseList history={props.history} />
+            <ChooseList {...props} />
         </div>
     );
 }
-export default withRouter(TopNav);
+// export default withRouter(TopNav);

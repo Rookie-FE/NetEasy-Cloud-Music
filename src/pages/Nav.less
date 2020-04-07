@@ -1,23 +1,52 @@
+@import '../index.less';
 .container {
     display: flex;
     flex-direction: column;
-    background-color: red;
     justify-content: space-between;
     height: 100px;
     padding: 15px;
+    background-color: @theme-color;
     .header {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        color: white;
-        font-size: 20px;
+        padding: 5px 10px;
+        background: @theme-color;
+        & > span {
+            color: #f1f1f1;
+            font-size: 20px;
+            line-height: 40px;
+            &.iconfont {
+                font-size: 25px;
+            }
+        }
     }
     .content {
         display: flex;
-        padding: 0 60px;
-        justify-content: space-between;
-        color: white;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 44px;
+        background: @theme-color;
+        a {
+            flex: 1;
+            padding: 2px 0;
+            color: #e4e4e4;
+            font-size: 14px;
+            &.selected {
+                span {
+                    padding: 3px 0;
+                    color: #f1f1f1;
+                    font-weight: 700;
+                    border-bottom: 2px solid #f1f1f1;
+                }
+            }
+        }
         div {
-            padding: 3px 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
     }
 }

@@ -4,6 +4,7 @@ import Home from '../pages/home';
 import Recommend from '../pages/recommend/Recommend';
 import Singer from '../pages/singer/Singer';
 import Ranking from '../pages/ranking/Ranking';
+import Error from '../component/Error';
 
 export default [
     {
@@ -26,6 +27,10 @@ export default [
             {
                 path: '/rank',
                 component: Ranking,
+            },
+            {
+                path: '*',
+                component: Error,
             },
         ],
     },

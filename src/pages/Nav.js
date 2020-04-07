@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { UnorderedListOutlined, SearchOutlined } from '@ant-design/icons';
 import './Nav.less';
@@ -19,7 +19,7 @@ function ChooseList({ history }) {
             <div
                 style={{ borderBottom: isSelect === 2 ? '2px solid white' : null }}
                 onClick={() => {
-                    history.push('/singer');
+                    history.push('/singers');
                     setSelect(2);
                 }}
             >
@@ -28,7 +28,7 @@ function ChooseList({ history }) {
             <div
                 style={{ borderBottom: isSelect === 3 ? '2px solid white' : null }}
                 onClick={() => {
-                    history.push('/ranking');
+                    history.push('/rank');
                     setSelect(3);
                 }}
             >

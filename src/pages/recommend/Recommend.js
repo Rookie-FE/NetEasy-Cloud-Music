@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from './Slider';
-import styles from './index.less';
 
 export default function Recommend() {
     // mock 数据
@@ -10,7 +9,8 @@ export default function Recommend() {
         };
     });
     return (
-        <div className={styles.container}>
+        <div>
+            <div />
             <Slider bannerList={bannerList} />
         </div>
     );

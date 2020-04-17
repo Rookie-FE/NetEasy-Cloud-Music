@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'swiper';
-import styles from './slider.module.less';
+import './slider.less';
 
 export default function Slider(props) {
     const [sliderSwiper, setSliderSwiper] = useState(null);
@@ -22,14 +22,14 @@ export default function Slider(props) {
     }, [bannerList.length, sliderSwiper]);
 
     return (
-        <div className={styles.container}>
-            <div className={styles.before} />
-            <div className={styles['slider-container']}>
-                <div className={styles['swiper-wrapper']}>
+        <div className="s-container">
+            <div className="before" />
+            <div className="slider-container">
+                <div className="swiper-wrapper">
                     {bannerList.map((slider) => {
                         return (
-                            <div className={styles['swiper-slide']} key={slider.imageUrl}>
-                                <div className={styles['slider-nav']}>
+                            <div className="swiper-slide" key={slider.imageUrl}>
+                                <div className="slider-nav">
                                     <img
                                         src={slider.imageUrl}
                                         width="100%"
@@ -41,7 +41,7 @@ export default function Slider(props) {
                         );
                     })}
                 </div>
-                <div className={styles['swiper-pagination']} />
+                <div className="swiper-pagination" />
             </div>
         </div>
     );

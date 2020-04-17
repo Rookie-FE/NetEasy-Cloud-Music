@@ -7,17 +7,17 @@ function ChooseList() {
     return (
         <div className={styles.content}>
             <NavLink to="/recommend" activeClassName={styles.selected}>
-                <div>
+                <div className={styles.tabItem}>
                     <span>推荐</span>
                 </div>
             </NavLink>
             <NavLink to="/singers" activeClassName={styles.selected}>
-                <div>
+                <div className={styles.tabItem}>
                     <span>歌手</span>
                 </div>
             </NavLink>
             <NavLink to="/rank" activeClassName={styles.selected}>
-                <div>
+                <div className={styles.tabItem}>
                     <span>排行榜</span>
                 </div>
             </NavLink>

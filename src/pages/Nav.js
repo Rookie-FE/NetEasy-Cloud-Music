@@ -1,22 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { UnorderedListOutlined, SearchOutlined } from '@ant-design/icons';
-import './Nav.less';
+import styles from './nav.module.less';
 
 function ChooseList() {
     return (
-        <div className="content">
-            <NavLink to="/recommend" activeClassName="selected">
+        <div className={styles.content}>
+            <NavLink to="/recommend" activeClassName={styles.selected}>
                 <div>
                     <span>推荐</span>
                 </div>
             </NavLink>
-            <NavLink to="/singers" activeClassName="selected">
+            <NavLink to="/singers" activeClassName={styles.selected}>
                 <div>
                     <span>歌手</span>
                 </div>
             </NavLink>
-            <NavLink to="/rank" activeClassName="selected">
+            <NavLink to="/rank" activeClassName={styles.selected}>
                 <div>
                     <span>排行榜</span>
                 </div>
@@ -27,8 +27,8 @@ function ChooseList() {
 
 export default function TopNav(props) {
     return (
-        <div className="container">
-            <div className="header">
+        <div className={styles.container}>
+            <div className={styles.header}>
                 <UnorderedListOutlined />
                 <span>云音乐</span>
                 <SearchOutlined />
